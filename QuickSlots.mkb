@@ -1,0 +1,80 @@
+#!/usr/bin/env mkb
+
+# Quick Project
+
+if {{ option use_prebuilt }}
+{
+    subproject "$MARMALADE_ROOT/quick/quick_prebuilt"
+}
+else
+{
+    subproject "$MARMALADE_ROOT/quick/quick"
+}
+
+options
+{
+    s3e-data-dir = resources
+    app-icf = 'resources/common.icf,resources/app.icf'
+    builddir = build_temp
+}
+
+files
+{
+    (resources)
+    app.icf
+    main.lua
+}
+
+assets
+{
+    (resources)
+        .
+}
+
+#assets
+#{
+#	(resources)
+#	.
+#	
+#   [common]
+#    (resources)
+#    quicklua/dbg.lua
+#   quicklua/openquick.lua
+#   quicklua/QConfig.lua
+#    
+#	config.lua
+#  fonts
+#   textures
+# sounds
+#	
+#	Utility.lua
+#   NodeUtility.lua
+#  VirtualResolution.lua
+#	Globals.lua
+#	
+#	["development"]
+#	<include common>
+#	(resources)
+#	.
+#	
+#	["distribution"] # use precompiled and concatenated files for performance
+#	<include common>
+#	(resources-ram)
+#	.
+#}
+
+deployments
+{
+    icon=deploy-assets/icon.png
+	name="Signal Slots"
+    ["Windows"]
+    win32
+    arch=x86
+
+    ["Mac OS X"]
+    osx
+    arch=x86
+
+    # Ensure subsequent options set on "Default" configuration
+    ["Default"]
+}

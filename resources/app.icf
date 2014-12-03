@@ -1,0 +1,22 @@
+[S3E]
+# Add any settings here
+DispFixRot=FixedPortrait
+
+MemSize=60000000
+MemSizeDebug=200000000
+
+#SplashScreenWidth="xxx"
+#SplashScreenHeight="xxx"
+#SplashScreenFile="textures/splash.jpg"
+#SplashScreenBkR=0x00
+#SplashScreenBkG=0x00
+#SplashScreenBkB=0x00
+#SplashScreenMinTime=2000
+
+KeyAbsBSK=Esc
+
+IOSDispScaleFactor=200 #use retina
+
+[QUICK]
+mainFileName="main.lua"
+configFileName="config.lua"

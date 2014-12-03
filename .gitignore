@@ -1,0 +1,9 @@
+.DS\_Store
+.DS_Store
+*.sw?
+**/build_temp/**
+**/resources-ram/**
+**/project_*
+development.icf
+iwtrace.txt
+**/source-assets/**
